@@ -17,28 +17,28 @@ intervalCount(function() {
 ***********************************************************************/
 
 //let count = 0;
-function intervalCount(cb, delay, amount) {
-    // invoke the callback "amount" number of times
-    // let timeoutID = setTimeout(cb, delay);
-    let timeoutID = setInterval(cb, delay);
+// function intervalCount(cb, delay, amount) {
+//     // invoke the callback "amount" number of times
+//     // let timeoutID = setTimeout(cb, delay);
+//     let timeoutID = setInterval(cb, delay);
 
-    // console.log(timeoutID);
-    let waitToStop = delay * amount;
-    console.log('start the interval');
+//     // console.log(timeoutID);
+//     let waitToStop = delay * amount;
+//     console.log('start the interval');
 
-    // separate timer stops the first timer
-    setTimeout(() => {
-        console.log('end the interval');
-        clearInterval(timeoutID)
-    }, waitToStop + 5);             // wait for 1500 ms to terminate the interval method
-                                    // plus an extra 5ms buffer
-  }
-    //utilize a 'closure' to your advantage?
+//     // separate timer stops the first timer
+//     setTimeout(() => {
+//         console.log('end the interval');
+//         clearInterval(timeoutID)
+//     }, waitToStop + 5);             // wait for 1500 ms to terminate the interval method
+//                                     // plus an extra 5ms buffer
+//   }
+//     //utilize a 'closure' to your advantage?
 
-intervalCount(function() {
-    console.log('hi');
-    count++;
-}, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
+// intervalCount(function() {
+//     console.log('hi');
+//     count++;
+// }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 
 
 
