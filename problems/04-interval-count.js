@@ -16,7 +16,7 @@ intervalCount(function() {
 }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 ***********************************************************************/
 
-let count = 0;
+//let count = 0;
 function intervalCount(cb, delay, amount) {
     // invoke the callback "amount" number of times
     // let timeoutID = setTimeout(cb, delay);
@@ -40,6 +40,26 @@ intervalCount(function() {
     count++;
 }, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 
+
+
+
+
+function intervalCount(cb, delay, amount) {
+  let count = 0;
+  let timeoutID = setInterval(() => {
+    cb();
+    count++;
+    //console.log(count)
+      if (count === amount) {
+        clearInterval(timeoutID);
+      }
+  }, delay);
+}
+  //utilize a 'closure' to your advantage?
+
+intervalCount(function() {
+  console.log('hi');
+}, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
